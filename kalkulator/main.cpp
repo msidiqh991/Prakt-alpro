@@ -8,14 +8,15 @@ int main() {
     cout << "Contoh program kalkulator sederhana";
     cout << endl;
 
-    cout << "Masukkan operator \nContoh : +, -, *, / \t: ";
-    cin >> operate;
-    cout <<endl;
-
     cout << "Masukkan Dua buah angka : " <<endl;
     cout << "Angka ke-1 : ";
     cin >> num1;
     cout << endl;
+
+    cout << "Masukkan operator \nContoh : +; -; *; / \t: ";
+    cin >> operate;
+    cout <<endl;
+
     cout << "Angke ke-2 : ";
 	cin >> num2;
 	cout <<endl;
