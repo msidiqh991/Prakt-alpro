@@ -5,6 +5,9 @@ int main() {
     char operate;
     float num1, num2;
 
+    cout << "Contoh program kalkulator sederhana";
+    cout << endl;
+
     cout << "Masukkan operator \nContoh : +, -, *, / \t: ";
     cin >> operate;
     cout <<endl;
