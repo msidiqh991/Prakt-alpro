@@ -14,7 +14,7 @@ class Output {
     }
 
     void getData() {
-        ambil_data.open("../dummy/out_proses.txt");
+        ambil_data.open("../pra_data/proses.txt");
         while(!ambil_data.eof()) {
             ambil_data >> data_file[index];
             index += 1;
