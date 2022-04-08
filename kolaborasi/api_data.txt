@@ -1,0 +1,18 @@
+- STRUK PEMBELIAN WARUNG X - 
+-----------------------------
+Yang dibeli : 
+-------------
+[1] Ayam Geprek        -> 1
+[2] Ayam Goreng        -> 0
+[3] Udang Goreng       -> 1
+[4] Cumi Goreng        -> 0
+[5] Ayam Bakar         -> 2
+-------------------------------
+Jarak tempuh rumah : 4 KM
+Harga Total        : Rp. 90000
+Diskon             : Rp. 13500
+Total - Diskon     : Rp. 76500
+Ongkir             : Rp. 25000
+Ongkir - Potongan  : Rp. 20000
+--------------------
+Keseluruhan Harga  : Rp. 96500

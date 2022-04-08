@@ -2,25 +2,27 @@ using namespace std;
 
 class Output {
     public :
-    void cetak() {
-        cout << "- STRUK PEMBELIAN WARUNG X - \n";
-        cout << "-----------------------------\n";
-        cout << "Yang dibeli : \n";
-        cout << "-------------\n";
-        cout << "[1] Ayam Geprek        -> " << data_file[6] <<endl;
-        cout << "[2] Ayam Goreng        -> " << data_file[7] <<endl;
-        cout << "[3] Udang Goreng       -> " << data_file[8] <<endl;
-        cout << "[4] Cumi Goreng        -> " << data_file[9] <<endl;
-        cout << "[5] Ayam Bakar         -> " << data_file[10] <<endl;
-        cout << "-------------------------------\n";
-        cout << "Jarak tempuh rumah : " << data_file[11] <<" KM" <<endl;
-        cout << "Harga Total        : Rp. " << data_file[0] <<endl;
-        cout << "Diskon             : Rp. " << data_file[1] <<endl;
-        cout << "Total - Diskon     : Rp. " << data_file[2] <<endl;;
-        cout << "Ongkir             : Rp. " << data_file[3] <<endl;
-        cout << "Ongkir - Potongan  : Rp. " << data_file[4] <<endl;
-        cout << "--------------------" <<endl;
-        cout << "Keseluruhan Harga  : Rp. " << data_file[5];
+    void cetak(){
+        tulis_data.open("../api_data.txt");
+        tulis_data << "- STRUK PEMBELIAN WARUNG X - \n";
+        tulis_data << "-----------------------------\n";
+        tulis_data << "Yang dibeli : \n";
+        tulis_data << "-------------\n";
+        tulis_data << "[1] Ayam Geprek        -> " << data_file[6] <<endl;
+        tulis_data << "[2] Ayam Goreng        -> " << data_file[7] <<endl;
+        tulis_data << "[3] Udang Goreng       -> " << data_file[8] <<endl;
+        tulis_data << "[4] Cumi Goreng        -> " << data_file[9] <<endl;
+        tulis_data << "[5] Ayam Bakar         -> " << data_file[10] <<endl;
+        tulis_data << "-------------------------------\n";
+        tulis_data << "Jarak tempuh rumah : " << data_file[11] <<" KM" <<endl;
+        tulis_data << "Harga Total        : Rp. " << data_file[0] <<endl;
+        tulis_data << "Diskon             : Rp. " << data_file[1] <<endl;
+        tulis_data << "Total - Diskon     : Rp. " << data_file[2] <<endl;;
+        tulis_data << "Ongkir             : Rp. " << data_file[3] <<endl;
+        tulis_data << "Ongkir - Potongan  : Rp. " << data_file[4] <<endl;
+        tulis_data << "--------------------" <<endl;
+        tulis_data << "Keseluruhan Harga  : Rp. " << data_file[5];
+        tulis_data.close();
     }
 
     void getData() {
