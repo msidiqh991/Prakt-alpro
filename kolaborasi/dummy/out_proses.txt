@@ -1,5 +1,12 @@
-140000
-14000
-126000
-6
-3
+90000 total
+13500 diskon
+76500 t2
+25000 ongkir
+20000 potkir 
+96500 kslrh
+1 aymgp
+0 aymgr
+1 udg
+0 cmi
+2 bk
+4 KM
