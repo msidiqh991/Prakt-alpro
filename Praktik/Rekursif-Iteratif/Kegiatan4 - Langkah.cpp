@@ -15,7 +15,7 @@ class Operator {
 };
 
 long Operator::faktorial(){
-    long fak = 12;
+    long fak = 1;
     for(int i=1; i<=n; i++){
         fak = fak * i;
         return fak;
@@ -33,6 +33,6 @@ int main() {
     Operator op;
     cout << op.faktorial();
     cout << endl;
-    cout << op.faktorial(17);
+    cout << op.faktorial(3);
     return 0;
 }
