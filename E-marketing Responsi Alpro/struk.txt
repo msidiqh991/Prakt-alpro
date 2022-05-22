@@ -1,0 +1,31 @@
+--------------------
+STRUK PEMBAYARAN
+--------------------
+Alamat	= Jl. Rajawali, Banguntapan
+------------------
+Produk dipesan :
+-
+Order list ke-1
+Nama Barang 	= Gelang
+Jumlah satuan 	= 1
+Harga satuan 	= Rp.17000
+Sub total 	= Rp.17000
+
+Order list ke-2
+Nama Barang 	= Mouse wireless
+Jumlah satuan 	= 1
+Harga satuan 	= Rp.64900
+Sub total 	= Rp.64900
+
+---------------------
+Opsi Pengiriman = Reguler
+Ongkos kirim 	= Rp.16000
+Total Ongkir 	= Rp.0
+Voucher[diskon] 	= Rp.36855
+Biaya Proteksi 	= Rp.7000
+Metode bayar 	= Dana
+
+Total Pembayaran = Rp.52045
+----------------------
+		 [Jumlah Saldo : Rp.150000]
+			 Kembali : Rp.97955
