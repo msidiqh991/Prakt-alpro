@@ -4,113 +4,81 @@ using namespace std;
 
 class array{
 public:
-	input();
-	cetak_satu();
-  	proses_konversi();
-  	cetak_dua();
-  	sortby();
+ 	void input();
+	void cetak1D();
+  	void convert();
+  	void cetak2D();
+  	void sortby();
   	
 private:
-	int array[10][10],array2[10];
-	int x[10][10], x2[10];
-	int n, a;
-	int m, b;
+	int a[10][10], b[10];
+	int n, m, tukar;
 };
 
-array::input(){
-	cout << " Array-1 \n";
+void array::input(){
 	cout << " Jumlah baris : ";
 	cin >> n;
 	cout << " Jumlah kolom : "; 
 	cin >> m;
 	cout <<endl;
+	
+	cout <<" Array Input - " <<endl;
 	for (int i=0; i<n; i++) {
 	for (int j=0; j<m; j++) {
-		cout << " Data ke "<<i<<","<<j<<" = "; 
-		cin >> array[i][j];}
-	}
-	
-	cout << "\n Array-2 \n";
-	cout << " Input jumlah baris : ";
-	cin >> a;
-	cout << " Input jumlah kolom : "; 
-	cin >> b;
-	cout <<endl;
-	for (int i=0; i<a; i++) {
-	for (int j=0; j<b; j++) {
-		cout << " Data ke "<<i<<","<<j<<" = "; 
-		cin >> x[i][j];}
+		cout << " Data ke "<< i+1 <<","<<j<<" = "; 
+		cin >> a[i][j];
+		}
 	}
 }
 
-array::cetak_satu(){
+void array::cetak2D(){
 	cout << "\n Bentuk array multi dimensi :"<<endl;
-	cout << " Array 1 : \n";
+	cout << " ========================= \n";
 	for (int i=0; i<n; i++){
 	for (int j=0; j<m; j++){
-		cout <<" " << array[i][j]<<"\t";}
+		cout <<" " << a[i][j]<<"\t";}
 		cout << endl;
 	}
-	cout << "\n Array 2 : \n";
-	for (int i=0; i<a; i++){
-	for (int j=0; j<b; j++){
-		cout <<" " << x[i][j]<<"\t";}
-		cout <<endl;
-	}
 }
 
-array::proses_konversi(){
-	int k=0;
-	// array 1
-	for (int i=0; i<n; i++) {
-		for (int j=0; j<m; j++) {
-			array2[k]= array[i][j];
-			k++;
-		}
-	}
-	// array 2
-	int l=0;
-	for (int i=0; i<a; i++) {
-		for (int j=0; j<b; j++) {
-			x2[l]= x[i][j];
-			l++;
+void array::convert(){
+	int x=0;
+	for (int i=0; i<n; i++){
+		for (int j=0; j<m; j++){
+			b[x]= a[i][j];
+			x++;
 		}
 	}
 }
 
-array::cetak_dua(){
-   	cout <<endl << " Setelah dikonversi menjadi array 1 dimensi :"<<endl;
-	for(int k=0; k<m*n; k++){
-		cout <<" " << array2[k] <<" ";
-		cout <<" " << x2[k] << " ";
+void array::sortby(){
+	for(int i=0; i<n*m-1; i++){
+        tukar = i;
+        int temp = 0;
+        for(int j=i+1; j<n*m; j++){
+            if(b[j] < b[tukar]){
+            	tukar = j;
+            }
+        }   
+        temp = b[tukar];
+        b[tukar] = b[i];
+        b[i] = temp;
+    } 
+}
+
+void array::cetak1D(){
+   	cout <<endl << " Konversi ke Array 1 dimensi :"<<endl;
+	for (int k=0; k<n*m; k++){
+		cout <<" Data ke [" << k+1 <<"] = " << b[k] <<endl;
 	}
 }
-
-array::sortby(){
-	int temp = 0;
-	cout <<endl << "\n Sorting Ascending : " <<endl;
-    for (int i=0; i<m; i++){
-        for (int j=0; j<=n; j++){
-            if(array2[i] < array2[j]){
-                temp = array2[i];
-                array2[i] = array2[j];
-                array2[j] = temp;
-            }
-             if(x2[i] < x2[j]){
-                temp = x2[i];
-                x2[i] = x2[j];
-                x2[j] = temp;
-            }
-        }
-    }
-}
-
-int main (){
+	
+int main(){
 	array x;
 	x.input();
-	x.cetak_satu();
-	x.proses_konversi();
+	x.cetak2D();
+	x.convert();
 	x.sortby();
-		x.cetak_dua();
+	x.cetak1D();
 	return 0;
 }
